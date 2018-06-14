@@ -1,0 +1,786 @@
+@import "../libs/bootstrap/scss/bootstrap.scss";
+
+$grayColor: #4c4c4c;
+$greenColor: #a3b93c;
+$orangeColor: #d2451f;
+$yellowColor: #eeb900;
+$brownColor: #6d604c;
+$lightGrayColor: #999999;
+
+@font-face {
+  font-family: "raleway regular";
+  src: url('../fonts/Raleway-v4020-Regular.ttf') ;
+}
+
+@font-face {
+  font-family: "raleway medium";
+  src: url('../fonts/Raleway-v4020-Medium.ttf') ;
+}
+
+@font-face {
+  font-family: "raleway light";
+  src: url('../fonts/Raleway-v4020-Light.ttf') ;
+}
+
+@font-face {
+  font-family: "raleway extraBold";
+  src: url('../fonts/Raleway-v4020-ExtraBold.ttf') ;
+}
+
+@font-face {
+  font-family: "raleway black";
+  src: url('../fonts/Raleway-v4020-Black.ttf') ;
+}
+
+@font-face {
+  font-family: "tavolga";
+  src: url('../fonts/tavolga.ttf') ;
+}
+
+@font-face {
+  font-family: "muller";
+  src: url('../fonts/muller.otf') ;
+}
+@font-face {
+  font-family: "magnolia";
+  src: url('../fonts/Magnolia Script.otf') ;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+.html-overflow {
+  overflow: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'raleway regulart', sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+  cursor: default;
+}
+
+a, a:hover, a:active, button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@function rem($size) {
+  @return $size / 16 * 1rem;
+}
+
+* {
+  @media (max-width: 1500px) {
+    font-size: 15px;
+  }
+  @media (max-width: 1366px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 13px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 13px;
+  }
+  @media (max-width: 991px) {
+    font-size: 12px;
+  }
+  @media (max-width: 880px) {
+    font-size: 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+body {
+
+}
+
+.desktop-version {
+
+  .header {
+    padding: 0 8rem;
+    position: relative;
+    @media (max-width: 1919px) {
+      padding: 0 4rem;
+    }
+    img {
+      height: 1.3rem;
+      width: auto;
+    }
+    .top-header {
+      p {
+        color: $grayColor;
+        font-size: 1.3rem;
+      }
+      .phone-number {
+        color: $greenColor;
+        font-size: 1.3rem;
+        transition: .3s;
+        border-bottom: 3px dotted rgba(0,0,0,0);
+        &:hover {
+          font-weight: bold;
+          border-bottom: 3px dotted $greenColor;
+          transition: .3s;
+        }
+      }
+      .recall-button {
+        font-size: 1rem;
+        background-color: $yellowColor;
+        border-radius: .5rem;
+        color: $grayColor;
+        padding: .3rem 1rem;
+        transition: .3s;
+        &:hover {
+          transition: .3s;
+          background-color: $greenColor;
+          color: #fff;
+        }
+      }
+      .account-sign {
+        img {
+          margin-top: .2rem;
+        }
+        a {
+          font-size: 1.2rem;
+          color: $grayColor;
+          padding: .3rem 1rem;
+          transition: .3s;
+          &:hover {
+            background-color: $yellowColor;
+            border-radius: .5rem;
+            color: white;
+          }
+        }
+      }
+    }
+    .middle-header {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        a {
+          white-space: nowrap;
+          font-size: 1.2rem;
+          color: $grayColor;
+          text-decoration: none;
+          transition: .3s;
+          &:hover {
+            transition: .3s;
+            color: $orangeColor;
+          }
+        }
+      }
+      .find-input {
+        background-color: #f6f6f6;
+        border-radius: 1rem;
+        height: 2.8rem;
+        input {
+          font-size: 1.3rem;
+          width: 18rem;
+          outline: none;
+          border: none;
+          background: none;
+          font-family: 'raleway regular', sans-serif;
+        }
+        button {
+          background: none;
+          border: none;
+          outline: none;
+          width: 3rem;
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+      .icon-with-number {
+        margin-left: 2.5rem;
+        position: relative;
+        img {
+          height: 2.5rem;
+          width: auto;
+        }
+        span {
+          font-size: .8rem;
+          height: 1.5rem;
+          width: 1.5rem;
+          background-color: $lightGrayColor;
+          color: #fff;
+          border-radius: 50%;
+          position: absolute;
+          top: -1rem;
+          right: -1rem;
+        }
+      }
+    }
+    .bottom-header {
+      width: 80% !important;
+      .shares {
+        font-family: 'raleway black', sans-serif;
+        font-size: 1.5rem;
+        background-color: $orangeColor;
+        border-radius: 2rem;
+        padding: .2rem 1rem;
+      }
+      .dropdown {
+        max-width: 20%;
+        margin: 0 .8rem;
+        a {
+          font-family: 'raleway black', sans-serif;
+          box-shadow: none !important;
+          font-size: 1.5rem;
+          background: none;
+          border: none;
+          color: $brownColor;
+        }
+        .dropdown-item {
+          font-size: 1.2rem;
+          font-family:"raleway regular", sans-serif;
+          &:hover {
+            background-color: $orangeColor;
+            color: #fff;
+          }
+        }
+        &:active, &:focus, &:hover {
+          background: none !important;
+        }
+      }
+    }
+    .organic-img {
+      position: absolute;
+      bottom: 0;
+      left: 8rem;
+      height: 10rem;
+      width: auto;
+      @media (max-width: 1919px) {
+        left: 4rem;
+      }
+    }
+  }
+
+  .route-path {
+    height: 8rem;
+    padding: 0rem 8rem;
+    background-image: url(../images/path-bg.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    a, span {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      color: $grayColor;
+      margin-left: 2rem;
+      font-family:"raleway regular", sans-serif;
+    }
+    a:hover {
+      font-weight: bold;
+      color: $greenColor;
+      span {
+        color: $greenColor;
+      }
+    }
+  }
+
+  .main-section {
+    padding: 0rem 8rem;
+    @media (max-width: 1919px) {
+      padding: 0 4rem;
+    }
+    .left-side {
+      position: relative;
+      height: 40rem;
+      width: 32.2rem;
+      background-image: url(../images/main-section-left-bg.png);
+      background-repeat:no-repeat;
+      background-size:contain;
+      padding: 5rem 1rem 1rem 1rem;
+      .left-side-avatar {
+        width: 10rem;
+        height:auto;
+        margin-bottom: 1.5rem;
+      }
+      h4 {
+        font-family:'tavolga', sans-serif;
+        font-size: 2rem;
+        color: $grayColor;
+        margin-bottom: 1rem;
+      }
+      h5 {
+        font-size: 1.3rem;
+        color: $grayColor;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: $grayColor;
+      }
+      button {
+        font-size: 1.3rem;
+        background-color: $greenColor;
+        color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        padding: .5rem 2rem;
+        margin-top: 4rem;
+      }
+      .exit-button {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        height: 3rem;
+        width:auto;
+      }
+    }
+
+    .right-side {
+      height: 40rem;
+      padding: 1rem 0rem 0 0;
+      h3 {
+        color: $grayColor;
+        font-size: 2rem;
+        font-family:'tavolga', sans-serif;
+      }
+      .item-inside {
+        background-image: url(../images/right-side-bg.png);
+        height: 16rem;
+        width: 16rem;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        img {
+          width: 4rem;
+          height:auto;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.1rem;
+          font-family:'tavolga', sans-serif;
+          color: $grayColor;
+        }
+      }
+    }
+  }
+  .ask-question {
+    padding: 0 8rem;
+    position: relative;
+    height: 20rem;
+    @media (max-width: 1919px) {
+      padding: 0 4rem;
+    }
+    @media (max-width: 1463px) {
+      height: 30rem;
+    }
+    img {
+      z-index: 0;
+      padding: 0 8rem;
+      @media (max-width: 1919px) {
+        padding: 0 4rem;
+      }
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+    h3 {
+      z-index: 1;
+      font-family:'tavolga', sans-serif;
+      font-size: 3rem;
+      color: $grayColor;
+    }
+    p {
+      z-index: 1;
+      width: 60%;
+      font-size: 1.5rem;
+      color: $grayColor;
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $grayColor;
+        transition: .3s;
+        &:hover {
+          transition: .3s;
+          font-weight:bold;
+          color: $orangeColor;
+        }
+      }
+    }
+    form {
+      z-index: 1;
+      input {
+        background-color: #fff;
+        outline:none;
+        border: none;
+        border-radius: 3px;
+        font-size: 1.4rem;
+        color: $grayColor;
+        height: 3rem;
+        width: 20rem;
+        padding:0 .5rem;
+      }
+      button {
+        font-family:"raleway extraBold",sans-serif;
+        color: $brownColor;
+        background-color: #fff;
+        border: 2px solid $greenColor;
+        font-size: 1.2rem;
+        outline: none;
+        padding:.7rem 2rem;
+        border-radius: 2rem;
+        transition: .3s;
+        &:hover {
+          transition: .3s;
+          color: #fff;
+          background-color: $greenColor;
+          border: 2px solid $lightGrayColor;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 40rem;
+    padding: 0 8rem;
+    position: relative;
+    @media (max-width: 1919px) {
+      padding: 0 4rem;
+    }
+    .first-column {
+      width: 25rem;
+      p {
+        color: $brownColor;
+        font-size: 1.1rem;
+      }
+      img {
+        width: 10rem;
+        height:auto;
+      }
+    }
+    .second-column, .third-column {
+      width: 18rem;
+    }
+    .fourth-column {
+      a {
+        color: $greenColor;
+        font-size: 1.7rem;
+        font-weight:bold;
+        img {
+          width: 1.4rem;
+          height:auto;
+        }
+      }
+      p {
+        font-family:'tavolga', sans-serif;
+        color: $grayColor;
+        font-size: 1.5rem;
+      }
+      .icons {
+        img {
+          margin-right: .3rem;
+          width: 3rem;
+          height:auto;
+        }
+      }
+    }
+    h3 {
+      font-family:'raleway extraBold',sans-serif;
+      font-size: 1.5rem;
+      color: $grayColor;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: .5rem;
+      }
+      a {
+        white-space: nowrap;
+        font-size: 1.3rem;
+        color: $grayColor;
+        text-decoration: none;
+        transition: .4s;
+        border-bottom:2px solid rgba(0,0,0,0);
+        &:hover {
+          font-weight:bold;
+          margin-left: .5rem;
+          transition: .4s;
+          border-bottom:2px solid $grayColor;
+        }
+      }
+    }
+  }
+
+  .bg-bottom {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+  }
+}
+
+.mobile-version {
+  .route-path-mobile {
+    background-image: url(../images/path-bg.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    a, span {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      color: $grayColor;
+      margin-left: 1rem;
+      font-family:"raleway regular", sans-serif;
+    }
+    a:hover {
+      font-weight: bold;
+      color: $greenColor;
+      span {
+        color: $greenColor;
+      }
+    }
+  }
+
+  .main-section {
+    .left-side {
+      position: relative;
+      width: 100%;
+      background-image: url(../images/main-section-left-bg.png);
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      padding: 5rem 1rem 1rem 1rem;
+      height: 38rem;
+      .left-side-avatar {
+        width: 10rem;
+        height:auto;
+        margin-bottom: 1.5rem;
+      }
+      h4 {
+        font-family:'tavolga', sans-serif;
+        font-size: 2rem;
+        color: $grayColor;
+        margin-bottom: 1rem;
+      }
+      h5 {
+        font-size: 1.3rem;
+        color: $grayColor;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: $grayColor;
+      }
+      button {
+        font-size: 1.3rem;
+        background-color: $greenColor;
+        color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        padding: .5rem 2rem;
+        margin-top: 4rem;
+      }
+      .exit-button {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        height: 3rem;
+        width:auto;
+      }
+    }
+
+    .right-side {
+      h3 {
+        color: $grayColor;
+        font-size: 2rem;
+        font-family:'tavolga', sans-serif;
+      }
+      .item-inside {
+        background-image: url(../images/right-side-bg.png);
+        height: 16rem;
+        width: 16rem;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        img {
+          width: 4rem;
+          height:auto;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.1rem;
+          font-family:'tavolga', sans-serif;
+          color: $grayColor;
+        }
+      }
+    }
+  }
+
+  .ask-question {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    h3 {
+      font-family:'tavolga', sans-serif;
+      font-size: 2rem;
+      color: $grayColor;
+    }
+    p {
+      width: 90%;
+      font-size: 1.5rem;
+      color: $grayColor;
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight:bold;
+        color: $orangeColor;
+        transition: .3s;
+        &:hover {
+          transition: .3s;
+          font-weight:bold;
+          color: $orangeColor;
+        }
+      }
+    }
+    form {
+      input {
+        background-color: #fff;
+        outline:none;
+        border: none;
+        border-radius: 3px;
+        font-size: 1.4rem;
+        color: $grayColor;
+        height: 3rem;
+        width: 20rem;
+        padding:0 .5rem;
+      }
+      button {
+        font-family:"raleway extraBold",sans-serif;
+        color: $brownColor;
+        background-color: #fff;
+        border: 2px solid $greenColor;
+        font-size: 1.2rem;
+        outline: none;
+        padding:.7rem 2rem;
+        border-radius: 2rem;
+        transition: .3s;
+        &:hover {
+          transition: .3s;
+          color: #fff;
+          background-color: $greenColor;
+          border: 2px solid $lightGrayColor;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 80rem;
+    padding: 0 8rem;
+    position: relative;
+    @media (max-width: 1919px) {
+      padding: 0 4rem;
+    }
+    .first-column {
+      width: 25rem;
+      p {
+        color: $brownColor;
+        font-size: 1.1rem;
+      }
+      img {
+        width: 10rem;
+        height:auto;
+      }
+    }
+    .second-column, .third-column {
+      width: 18rem;
+    }
+    .fourth-column {
+      a {
+        color: $greenColor;
+        font-size: 1.7rem;
+        font-weight:bold;
+        img {
+          width: 1.4rem;
+          height:auto;
+        }
+      }
+      p {
+        font-family:'tavolga', sans-serif;
+        color: $grayColor;
+        font-size: 1.5rem;
+      }
+      .icons {
+        img {
+          margin-right: .3rem;
+          width: 3rem;
+          height:auto;
+        }
+      }
+    }
+    h3 {
+      font-family:'raleway extraBold',sans-serif;
+      font-size: 1.5rem;
+      color: $grayColor;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: .5rem;
+      }
+      a {
+        white-space: nowrap;
+        font-size: 1.3rem;
+        color: $grayColor;
+        text-decoration: none;
+        transition: .4s;
+        border-bottom:2px solid rgba(0,0,0,0);
+        &:hover {
+          font-weight:bold;
+          margin-left: .5rem;
+          transition: .4s;
+          border-bottom:2px solid $grayColor;
+        }
+      }
+    }
+  }
+  .bg-bottom {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+  }
+}
